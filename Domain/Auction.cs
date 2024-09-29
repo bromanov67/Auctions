@@ -4,9 +4,9 @@ namespace Domain
 {
     public class Auction
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
 
         public string Name {  get; set; }
 
@@ -20,13 +20,13 @@ namespace Domain
 
         public DateTime DateEnd { get; set; }
 
-        public Auction(string name, DateTime dateStart, DateTime dateEnd)
+        /*public Auction(string name, DateTime dateStart, DateTime dateEnd)
         {
             Name = name;
             DateStart = dateStart;
             DateEnd = dateEnd;
             IsCreation = true;
-        }
+        }*/
 
        /* public DateTime DateEnd
         {
@@ -58,15 +58,15 @@ namespace Domain
 
             }
         }
-
-        public Auction(string name, int userId, DateTime dateStart, DateTime dateEnd)
+        public Auction() { }
+        public Auction(string name, Guid userId, DateTime dateStart, DateTime dateEnd)
         {
             Name = name;
             UserId = userId;
             DateStart = dateStart;
             DateEnd = dateEnd;
             IsCreation = true;
-            
+            Id = Guid.NewGuid();
         }
 
     }

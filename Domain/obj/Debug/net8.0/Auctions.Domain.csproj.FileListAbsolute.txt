@@ -10,3 +10,4 @@ C:\Users\bogda\source\repos\Auctions\Domain\obj\Debug\net8.0\Auctions.Domain.dll
 C:\Users\bogda\source\repos\Auctions\Domain\obj\Debug\net8.0\refint\Auctions.Domain.dll
 C:\Users\bogda\source\repos\Auctions\Domain\obj\Debug\net8.0\Auctions.Domain.pdb
 C:\Users\bogda\source\repos\Auctions\Domain\obj\Debug\net8.0\ref\Auctions.Domain.dll
+C:\Users\bogda\source\repos\Auctions\Domain\obj\Debug\net8.0\Auctions.Domain.sourcelink.json

@@ -5,9 +5,9 @@ namespace Domain
 {
     public class Lot
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
-        public int AuctionId { get; set; }
+        public Guid AuctionId { get; set; }
 
         public string Name { get; set; } = string.Empty;
         
