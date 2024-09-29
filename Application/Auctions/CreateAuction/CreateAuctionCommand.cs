@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 
 namespace Auctions.Application.Auctions.CreateAuction
 {
-    public record CreateAuctionCommand :IRequest<Result>
+    public record CreateAuctionCommand :IRequest<Result<Guid>>
     {
         [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
@@ -14,11 +14,11 @@ namespace Auctions.Application.Auctions.CreateAuction
         public DateTime DateStart { get; set; }
 
 
-        [JsonPropertyName("dateEnd")]
+        [JsonPropertyName("dateEnd")] 
         public DateTime DateEnd { get; set; }
 
         [JsonPropertyName("userId")]
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
 
     }
 }

@@ -13,3 +13,4 @@ C:\Users\bogda\source\repos\Auctions\Application\obj\Debug\net8.0\Auctions.Appli
 C:\Users\bogda\source\repos\Auctions\Application\bin\Debug\net8.0\Auctions.Domain.dll
 C:\Users\bogda\source\repos\Auctions\Application\bin\Debug\net8.0\Auctions.Domain.pdb
 C:\Users\bogda\source\repos\Auctions\Application\obj\Debug\net8.0\Auctions.F8F0BF5C.Up2Date
+C:\Users\bogda\source\repos\Auctions\Application\obj\Debug\net8.0\Auctions.Application.sourcelink.json

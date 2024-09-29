@@ -5,7 +5,7 @@ using MediatR;
 
 namespace Auctions.Application.User.CreateUser
 {
-    public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Result>
+    public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Result<Guid>>
     {
         private readonly IUserRepository _userRepository;
 
@@ -13,12 +13,12 @@ namespace Auctions.Application.User.CreateUser
         {
             _userRepository = userRepository;
         }
-        public async Task<Result> Handle(CreateUserCommand command, CancellationToken cancellationToken)
+        public async Task<Result<Guid>> Handle(CreateUserCommand command, CancellationToken cancellationToken)
         {
 
-            var user = new Domain.User(command.Name, command.Email);
+            var user = new Domain.User(command.Name, command.Email, command.Id);
             await _userRepository.CreateAsync(user);
-            return Result.Ok();
+            return Result.Ok(user.Id);
 
         }
     }

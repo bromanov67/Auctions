@@ -7,31 +7,31 @@ namespace Auctions.Application.Auctions.CancelAuction
     {
         private readonly IAuctionRepository _auctionRepository;
 
-        private async Task<bool> AuctionExists(int auctionId, CancellationToken cancellationToken)
+       /* private async Task<bool> AuctionExists(int auctionId, CancellationToken cancellationToken)
         {
             var auction = await _auctionRepository.GetByIdAsync(auctionId);
             return auction != null;
-        }
+        }*/
 
         public CancelAuctionCommandValidator(IAuctionRepository auctionRepository)
         {
-            _auctionRepository = auctionRepository;
+            /*_auctionRepository = auctionRepository;
 
             RuleFor(x => x.AuctionId)
                 .NotEmpty()
                 .MustAsync(AuctionExists)
-                .WithMessage("Аукцион не найден.");
+                .WithMessage("Аукцион не найден.");*/
 
-            RuleFor(x => x)
+           /* RuleFor(x => x)
                 .MustAsync(AuctionNotCanceled)
-                .WithMessage("Аукцион уже был отменен.");
+                .WithMessage("Аукцион уже был отменен.");*/
         }
 
 
-        private async Task<bool> AuctionNotCanceled(CancelAuctionCommand command, CancellationToken cancellationToken)
+        /*private async Task<bool> AuctionNotCanceled(CancelAuctionCommand command, CancellationToken cancellationToken)
         {
             var auction = await _auctionRepository.GetByIdAsync(command.AuctionId);
             return !auction.IsCanceled;
-        }
+        }*/
     }
 }

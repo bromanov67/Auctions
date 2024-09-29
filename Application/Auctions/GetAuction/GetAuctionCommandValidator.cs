@@ -1,20 +1,12 @@
-﻿/*using FluentValidation;
+﻿using FluentValidation;
 
-namespace Auctions.Application.Auctions.CreateAuction
+namespace Auctions.Application.Auctions.GetAuction
 {
-    public class CancelAuctionCommandValidator : AbstractValidator<CreateActionCommand>
+    public class GetAuctionCommandValidator : AbstractValidator<GetAuctionCommand>
     {
-        // TODO: написать правила валидации данных
-        public CancelAuctionCommandValidator()
+        public GetAuctionCommandValidator()
         {
-            RuleFor(n => n.Name).NotEmpty().WithMessage("Пустое имя");
-
-            RuleFor(x => x.DateStart).NotEmpty().WithMessage("Пустая дата начала");
-            RuleFor(x => x.DateEnd).NotEmpty().WithMessage("Пустая дата окончания");
-            RuleFor(x => x).Must(x => x.DateEnd == default(DateTime) || 
-            x.DateStart == default(DateTime) || x.DateEnd > x.DateStart)
-                    .WithMessage("Дата начала не может быть больше даты окончания");
-        }
+/*            RuleFor(x => x.AuctionId).GreaterThan(0).WithMessage("Invalid Auction Id.");
+*/        }
     }
 }
-*/
