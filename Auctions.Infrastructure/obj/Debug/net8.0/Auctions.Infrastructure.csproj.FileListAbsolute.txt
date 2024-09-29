@@ -1,0 +1,12 @@
+C:\Users\bogda\source\repos\Auctions\Auctions.Infrastructure\bin\Debug\net8.0\Auctions.Infrastructure.deps.json
+C:\Users\bogda\source\repos\Auctions\Auctions.Infrastructure\bin\Debug\net8.0\Auctions.Infrastructure.dll
+C:\Users\bogda\source\repos\Auctions\Auctions.Infrastructure\bin\Debug\net8.0\Auctions.Infrastructure.pdb
+C:\Users\bogda\source\repos\Auctions\Auctions.Infrastructure\obj\Debug\net8.0\Auctions.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\bogda\source\repos\Auctions\Auctions.Infrastructure\obj\Debug\net8.0\Auctions.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bogda\source\repos\Auctions\Auctions.Infrastructure\obj\Debug\net8.0\Auctions.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\bogda\source\repos\Auctions\Auctions.Infrastructure\obj\Debug\net8.0\Auctions.Infrastructure.AssemblyInfo.cs
+C:\Users\bogda\source\repos\Auctions\Auctions.Infrastructure\obj\Debug\net8.0\Auctions.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\bogda\source\repos\Auctions\Auctions.Infrastructure\obj\Debug\net8.0\Auctions.Infrastructure.dll
+C:\Users\bogda\source\repos\Auctions\Auctions.Infrastructure\obj\Debug\net8.0\refint\Auctions.Infrastructure.dll
+C:\Users\bogda\source\repos\Auctions\Auctions.Infrastructure\obj\Debug\net8.0\Auctions.Infrastructure.pdb
+C:\Users\bogda\source\repos\Auctions\Auctions.Infrastructure\obj\Debug\net8.0\ref\Auctions.Infrastructure.dll

@@ -1,0 +1,12 @@
+C:\Users\bogda\source\repos\Auctions\Domain\bin\Debug\net8.0\Auctions.Domain.deps.json
+C:\Users\bogda\source\repos\Auctions\Domain\bin\Debug\net8.0\Auctions.Domain.dll
+C:\Users\bogda\source\repos\Auctions\Domain\bin\Debug\net8.0\Auctions.Domain.pdb
+C:\Users\bogda\source\repos\Auctions\Domain\obj\Debug\net8.0\Auctions.Domain.csproj.AssemblyReference.cache
+C:\Users\bogda\source\repos\Auctions\Domain\obj\Debug\net8.0\Auctions.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bogda\source\repos\Auctions\Domain\obj\Debug\net8.0\Auctions.Domain.AssemblyInfoInputs.cache
+C:\Users\bogda\source\repos\Auctions\Domain\obj\Debug\net8.0\Auctions.Domain.AssemblyInfo.cs
+C:\Users\bogda\source\repos\Auctions\Domain\obj\Debug\net8.0\Auctions.Domain.csproj.CoreCompileInputs.cache
+C:\Users\bogda\source\repos\Auctions\Domain\obj\Debug\net8.0\Auctions.Domain.dll
+C:\Users\bogda\source\repos\Auctions\Domain\obj\Debug\net8.0\refint\Auctions.Domain.dll
+C:\Users\bogda\source\repos\Auctions\Domain\obj\Debug\net8.0\Auctions.Domain.pdb
+C:\Users\bogda\source\repos\Auctions\Domain\obj\Debug\net8.0\ref\Auctions.Domain.dll

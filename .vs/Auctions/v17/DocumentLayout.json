@@ -1,0 +1,896 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\bogda\\source\\repos\\Auctions\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|c:\\users\\bogda\\source\\repos\\auctions\\application\\auctions\\createauction\\createauctioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|solutionrelative:application\\auctions\\createauction\\createauctioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|c:\\users\\bogda\\source\\repos\\auctions\\application\\auctions\\createauction\\createauctioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|solutionrelative:application\\auctions\\createauction\\createauctioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions.database\\models\\betentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|solutionrelative:auctions.database\\models\\betentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions.database\\models\\auctionstatusentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|solutionrelative:auctions.database\\models\\auctionstatusentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions.database\\models\\auctionentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|solutionrelative:auctions.database\\models\\auctionentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E835D5B1-E79E-449D-9274-97B909EA5086}|Domain\\Auctions.Domain.csproj|c:\\users\\bogda\\source\\repos\\auctions\\domain\\auction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E835D5B1-E79E-449D-9274-97B909EA5086}|Domain\\Auctions.Domain.csproj|solutionrelative:domain\\auction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions.database\\configurations\\auctionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|solutionrelative:auctions.database\\configurations\\auctionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions.database\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|solutionrelative:auctions.database\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions.database\\aucitonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|solutionrelative:auctions.database\\aucitonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions.database\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|solutionrelative:auctions.database\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions.database\\auctionsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|solutionrelative:auctions.database\\auctionsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|c:\\users\\bogda\\source\\repos\\auctions\\application\\auctions\\iauctionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|solutionrelative:application\\auctions\\iauctionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{122A0D9A-8B0F-4BCB-9B3C-A2FD23FA7FBA}|Auctions\\Auctions.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{122A0D9A-8B0F-4BCB-9B3C-A2FD23FA7FBA}|Auctions\\Auctions.csproj|solutionrelative:auctions\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E835D5B1-E79E-449D-9274-97B909EA5086}|Domain\\Auctions.Domain.csproj|c:\\users\\bogda\\source\\repos\\auctions\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E835D5B1-E79E-449D-9274-97B909EA5086}|Domain\\Auctions.Domain.csproj|solutionrelative:domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|c:\\users\\bogda\\source\\repos\\auctions\\application\\users\\createuser\\createusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|solutionrelative:application\\users\\createuser\\createusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|c:\\users\\bogda\\source\\repos\\auctions\\application\\auctions\\createauction\\createauctioncommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|solutionrelative:application\\auctions\\createauction\\createauctioncommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{122A0D9A-8B0F-4BCB-9B3C-A2FD23FA7FBA}|Auctions\\Auctions.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions\\controllers\\auctioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{122A0D9A-8B0F-4BCB-9B3C-A2FD23FA7FBA}|Auctions\\Auctions.csproj|solutionrelative:auctions\\controllers\\auctioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{122A0D9A-8B0F-4BCB-9B3C-A2FD23FA7FBA}|Auctions\\Auctions.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{122A0D9A-8B0F-4BCB-9B3C-A2FD23FA7FBA}|Auctions\\Auctions.csproj|solutionrelative:auctions\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|c:\\users\\bogda\\source\\repos\\auctions\\application\\users\\createuser\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|solutionrelative:application\\users\\createuser\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|c:\\users\\bogda\\source\\repos\\auctions\\application\\users\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|solutionrelative:application\\users\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions.database\\migrations\\20240928154816_createe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|solutionrelative:auctions.database\\migrations\\20240928154816_createe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|c:\\users\\bogda\\source\\repos\\auctions\\application\\users\\createuser\\createusercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|solutionrelative:application\\users\\createuser\\createusercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions.database\\models\\lotstatusentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|solutionrelative:auctions.database\\models\\lotstatusentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions.database\\models\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|solutionrelative:auctions.database\\models\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E835D5B1-E79E-449D-9274-97B909EA5086}|Domain\\Auctions.Domain.csproj|c:\\users\\bogda\\source\\repos\\auctions\\domain\\lotstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E835D5B1-E79E-449D-9274-97B909EA5086}|Domain\\Auctions.Domain.csproj|solutionrelative:domain\\lotstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|c:\\users\\bogda\\source\\repos\\auctions\\application\\auctions\\cancelauction\\cancelauctioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|solutionrelative:application\\auctions\\cancelauction\\cancelauctioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928154634_createe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Auctions.Database\\Migrations\\20240928154634_createe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928153518_createe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Auctions.Database\\Migrations\\20240928153518_createe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions.database\\configurations\\lotconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|solutionrelative:auctions.database\\configurations\\lotconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions.database\\configurations\\betconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|solutionrelative:auctions.database\\configurations\\betconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|c:\\users\\bogda\\source\\repos\\auctions\\application\\auctions\\changeauction\\changeauctioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|solutionrelative:application\\auctions\\changeauction\\changeauctioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928152430_createe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Auctions.Database\\Migrations\\20240928152430_createe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928150238_createe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Auctions.Database\\Migrations\\20240928150238_createe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions.database\\models\\lotentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|solutionrelative:auctions.database\\models\\lotentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E835D5B1-E79E-449D-9274-97B909EA5086}|Domain\\Auctions.Domain.csproj|c:\\users\\bogda\\source\\repos\\auctions\\domain\\lot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E835D5B1-E79E-449D-9274-97B909EA5086}|Domain\\Auctions.Domain.csproj|solutionrelative:domain\\lot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E835D5B1-E79E-449D-9274-97B909EA5086}|Domain\\Auctions.Domain.csproj|c:\\users\\bogda\\source\\repos\\auctions\\domain\\bet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E835D5B1-E79E-449D-9274-97B909EA5086}|Domain\\Auctions.Domain.csproj|solutionrelative:domain\\bet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E835D5B1-E79E-449D-9274-97B909EA5086}|Domain\\Auctions.Domain.csproj|c:\\users\\bogda\\source\\repos\\auctions\\domain\\auctionstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E835D5B1-E79E-449D-9274-97B909EA5086}|Domain\\Auctions.Domain.csproj|solutionrelative:domain\\auctionstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928143540_create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Auctions.Database\\Migrations\\20240928143540_create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928140900_create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Auctions.Database\\Migrations\\20240928140900_create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928142824_create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Auctions.Database\\Migrations\\20240928142824_create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928140802_create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Auctions.Database\\Migrations\\20240928140802_create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions.database\\auctions.database.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3365A754-5676-4B8E-B2FB-CB1420FB385E}|Auctions.Database\\Auctions.Database.csproj|solutionrelative:auctions.database\\auctions.database.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|c:\\users\\bogda\\source\\repos\\auctions\\application\\auctions\\cancelauction\\cancelauctioncommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|solutionrelative:application\\auctions\\cancelauction\\cancelauctioncommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|c:\\users\\bogda\\source\\repos\\auctions\\application\\auctions\\changeauction\\changeauctioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|solutionrelative:application\\auctions\\changeauction\\changeauctioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|c:\\users\\bogda\\source\\repos\\auctions\\application\\auctions\\getauction\\getauctioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|solutionrelative:application\\auctions\\getauction\\getauctioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|c:\\users\\bogda\\source\\repos\\auctions\\application\\auctions\\cancelauction\\cancelauctioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|solutionrelative:application\\auctions\\cancelauction\\cancelauctioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{122A0D9A-8B0F-4BCB-9B3C-A2FD23FA7FBA}|Auctions\\Auctions.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{122A0D9A-8B0F-4BCB-9B3C-A2FD23FA7FBA}|Auctions\\Auctions.csproj|solutionrelative:auctions\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8534A7E8-4157-490F-BDEE-73F59E74E42B}|Auctions.Infrastructure\\Auctions.Infrastructure.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions.infrastructure\\auctions.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8534A7E8-4157-490F-BDEE-73F59E74E42B}|Auctions.Infrastructure\\Auctions.Infrastructure.csproj|solutionrelative:auctions.infrastructure\\auctions.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240924065513_AddAuctionEntity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Auctions.Database\\Migrations\\20240924065513_AddAuctionEntity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{122A0D9A-8B0F-4BCB-9B3C-A2FD23FA7FBA}|Auctions\\Auctions.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions\\controllers\\betscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{122A0D9A-8B0F-4BCB-9B3C-A2FD23FA7FBA}|Auctions\\Auctions.csproj|solutionrelative:auctions\\controllers\\betscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|c:\\users\\bogda\\source\\repos\\auctions\\application\\auctions\\getauction\\getauctioncommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|solutionrelative:application\\auctions\\getauction\\getauctioncommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|c:\\users\\bogda\\source\\repos\\auctions\\application\\auctions\\getauction\\getauctioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E28DBB52-690C-42CF-8699-8F8078C42626}|Application\\Auctions.Application.csproj|solutionrelative:application\\auctions\\getauction\\getauctioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{122A0D9A-8B0F-4BCB-9B3C-A2FD23FA7FBA}|Auctions\\Auctions.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{122A0D9A-8B0F-4BCB-9B3C-A2FD23FA7FBA}|Auctions\\Auctions.csproj|solutionrelative:auctions\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{122A0D9A-8B0F-4BCB-9B3C-A2FD23FA7FBA}|Auctions\\Auctions.csproj|c:\\users\\bogda\\source\\repos\\auctions\\auctions\\controllers\\lotscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{122A0D9A-8B0F-4BCB-9B3C-A2FD23FA7FBA}|Auctions\\Auctions.csproj|solutionrelative:auctions\\controllers\\lotscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Auction.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Domain\\Auction.cs",
+              "RelativeDocumentMoniker": "Domain\\Auction.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Domain\\Auction.cs",
+              "RelativeToolTip": "Domain\\Auction.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAzwD0AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T12:00:53.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AucitonRepository.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\AucitonRepository.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\AucitonRepository.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\AucitonRepository.cs",
+              "RelativeToolTip": "Auctions.Database\\AucitonRepository.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBwAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T07:51:13.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuctionConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Configurations\\AuctionConfiguration.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\Configurations\\AuctionConfiguration.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Configurations\\AuctionConfiguration.cs",
+              "RelativeToolTip": "Auctions.Database\\Configurations\\AuctionConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T19:11:20.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Configurations\\UserConfiguration.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\Configurations\\UserConfiguration.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Configurations\\UserConfiguration.cs",
+              "RelativeToolTip": "Auctions.Database\\Configurations\\UserConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T06:31:17.16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreateAuctionCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\CreateAuction\\CreateAuctionCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Auctions\\CreateAuction\\CreateAuctionCommandHandler.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\CreateAuction\\CreateAuctionCommandHandler.cs",
+              "RelativeToolTip": "Application\\Auctions\\CreateAuction\\CreateAuctionCommandHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T07:13:12.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuctionEntity.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Models\\AuctionEntity.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\Models\\AuctionEntity.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Models\\AuctionEntity.cs",
+              "RelativeToolTip": "Auctions.Database\\Models\\AuctionEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T07:26:56.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuctionStatusEntity.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Models\\AuctionStatusEntity.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\Models\\AuctionStatusEntity.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Models\\AuctionStatusEntity.cs",
+              "RelativeToolTip": "Auctions.Database\\Models\\AuctionStatusEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T18:47:34.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BetEntity.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Models\\BetEntity.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\Models\\BetEntity.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Models\\BetEntity.cs",
+              "RelativeToolTip": "Auctions.Database\\Models\\BetEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T18:29:08.428Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateAuctionCommand.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\CreateAuction\\CreateAuctionCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Auctions\\CreateAuction\\CreateAuctionCommand.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\CreateAuction\\CreateAuctionCommand.cs",
+              "RelativeToolTip": "Application\\Auctions\\CreateAuction\\CreateAuctionCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T05:59:20.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\UserRepository.cs",
+              "RelativeToolTip": "Auctions.Database\\UserRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T17:05:01.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuctionsDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\AuctionsDbContext.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\AuctionsDbContext.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\AuctionsDbContext.cs",
+              "RelativeToolTip": "Auctions.Database\\AuctionsDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T19:05:57.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IAuctionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\IAuctionRepository.cs",
+              "RelativeDocumentMoniker": "Application\\Auctions\\IAuctionRepository.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\IAuctionRepository.cs",
+              "RelativeToolTip": "Application\\Auctions\\IAuctionRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T16:30:04.711Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Auctions\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Auctions\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T07:21:34.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Domain\\User.cs",
+              "RelativeDocumentMoniker": "Domain\\User.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Domain\\User.cs",
+              "RelativeToolTip": "Domain\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T18:42:14.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CreateUserCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Users\\CreateUser\\CreateUserCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Users\\CreateUser\\CreateUserCommandHandler.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Users\\CreateUser\\CreateUserCommandHandler.cs",
+              "RelativeToolTip": "Application\\Users\\CreateUser\\CreateUserCommandHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T16:26:18.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CreateAuctionCommandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\CreateAuction\\CreateAuctionCommandValidator.cs",
+              "RelativeDocumentMoniker": "Application\\Auctions\\CreateAuction\\CreateAuctionCommandValidator.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\CreateAuction\\CreateAuctionCommandValidator.cs",
+              "RelativeToolTip": "Application\\Auctions\\CreateAuction\\CreateAuctionCommandValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T09:57:56.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AuctionController.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions\\Controllers\\AuctionController.cs",
+              "RelativeDocumentMoniker": "Auctions\\Controllers\\AuctionController.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions\\Controllers\\AuctionController.cs",
+              "RelativeToolTip": "Auctions\\Controllers\\AuctionController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T07:12:44.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions\\Program.cs",
+              "RelativeDocumentMoniker": "Auctions\\Program.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions\\Program.cs",
+              "RelativeToolTip": "Auctions\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T11:59:20.966Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CreateUserCommand.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Users\\CreateUser\\CreateUserCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Users\\CreateUser\\CreateUserCommand.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Users\\CreateUser\\CreateUserCommand.cs",
+              "RelativeToolTip": "Application\\Users\\CreateUser\\CreateUserCommand.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T16:25:49.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Users\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Application\\Users\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Users\\IUserRepository.cs",
+              "RelativeToolTip": "Application\\Users\\IUserRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T16:28:09.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "20240928154816_createe.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928154816_createe.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\Migrations\\20240928154816_createe.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928154816_createe.cs",
+              "RelativeToolTip": "Auctions.Database\\Migrations\\20240928154816_createe.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T15:48:17.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CreateUserCommandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Users\\CreateUser\\CreateUserCommandValidator.cs",
+              "RelativeDocumentMoniker": "Application\\Users\\CreateUser\\CreateUserCommandValidator.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Users\\CreateUser\\CreateUserCommandValidator.cs",
+              "RelativeToolTip": "Application\\Users\\CreateUser\\CreateUserCommandValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T16:26:40.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "LotStatusEntity.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Models\\LotStatusEntity.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\Models\\LotStatusEntity.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Models\\LotStatusEntity.cs",
+              "RelativeToolTip": "Auctions.Database\\Models\\LotStatusEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T18:29:21.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UserEntity.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Models\\UserEntity.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\Models\\UserEntity.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Models\\UserEntity.cs",
+              "RelativeToolTip": "Auctions.Database\\Models\\UserEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T18:29:24.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "LotStatus.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Domain\\LotStatus.cs",
+              "RelativeDocumentMoniker": "Domain\\LotStatus.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Domain\\LotStatus.cs",
+              "RelativeToolTip": "Domain\\LotStatus.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T18:27:50.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CancelAuctionCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\CancelAuction\\CancelAuctionCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Auctions\\CancelAuction\\CancelAuctionCommandHandler.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\CancelAuction\\CancelAuctionCommandHandler.cs",
+              "RelativeToolTip": "Application\\Auctions\\CancelAuction\\CancelAuctionCommandHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T06:33:05.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "20240928154634_createe.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928154634_createe.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\Migrations\\20240928154634_createe.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928154634_createe.cs",
+              "RelativeToolTip": "Auctions.Database\\Migrations\\20240928154634_createe.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T15:46:34.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "20240928153518_createe.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928153518_createe.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\Migrations\\20240928153518_createe.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928153518_createe.cs",
+              "RelativeToolTip": "Auctions.Database\\Migrations\\20240928153518_createe.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T15:35:18.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "LotConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Configurations\\LotConfiguration.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\Configurations\\LotConfiguration.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Configurations\\LotConfiguration.cs",
+              "RelativeToolTip": "Auctions.Database\\Configurations\\LotConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T06:31:18.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "BetConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Configurations\\BetConfiguration.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\Configurations\\BetConfiguration.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Configurations\\BetConfiguration.cs",
+              "RelativeToolTip": "Auctions.Database\\Configurations\\BetConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T20:26:36.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ChangeAuctionCommand.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\ChangeAuction\\ChangeAuctionCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Auctions\\ChangeAuction\\ChangeAuctionCommand.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\ChangeAuction\\ChangeAuctionCommand.cs",
+              "RelativeToolTip": "Application\\Auctions\\ChangeAuction\\ChangeAuctionCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAkAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T06:51:33.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "20240928152430_createe.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928152430_createe.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\Migrations\\20240928152430_createe.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928152430_createe.cs",
+              "RelativeToolTip": "Auctions.Database\\Migrations\\20240928152430_createe.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T15:24:30.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "20240928150238_createe.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928150238_createe.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\Migrations\\20240928150238_createe.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928150238_createe.cs",
+              "RelativeToolTip": "Auctions.Database\\Migrations\\20240928150238_createe.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T15:02:39.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "LotEntity.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Models\\LotEntity.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\Models\\LotEntity.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Models\\LotEntity.cs",
+              "RelativeToolTip": "Auctions.Database\\Models\\LotEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T18:29:11.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Lot.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Domain\\Lot.cs",
+              "RelativeDocumentMoniker": "Domain\\Lot.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Domain\\Lot.cs",
+              "RelativeToolTip": "Domain\\Lot.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T07:00:50.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Bet.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Domain\\Bet.cs",
+              "RelativeDocumentMoniker": "Domain\\Bet.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Domain\\Bet.cs",
+              "RelativeToolTip": "Domain\\Bet.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T07:11:49.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "AuctionStatus.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Domain\\AuctionStatus.cs",
+              "RelativeDocumentMoniker": "Domain\\AuctionStatus.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Domain\\AuctionStatus.cs",
+              "RelativeToolTip": "Domain\\AuctionStatus.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T07:36:43.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "20240928143540_create.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928143540_create.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\Migrations\\20240928143540_create.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928143540_create.cs",
+              "RelativeToolTip": "Auctions.Database\\Migrations\\20240928143540_create.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T14:35:41.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "20240928140900_create.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928140900_create.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\Migrations\\20240928140900_create.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928140900_create.cs",
+              "RelativeToolTip": "Auctions.Database\\Migrations\\20240928140900_create.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAowEkAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T14:09:00.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "20240928142824_create.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928142824_create.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\Migrations\\20240928142824_create.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928142824_create.cs",
+              "RelativeToolTip": "Auctions.Database\\Migrations\\20240928142824_create.cs",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAowIQAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T14:28:24.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "20240928140802_create.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928140802_create.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\Migrations\\20240928140802_create.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240928140802_create.cs",
+              "RelativeToolTip": "Auctions.Database\\Migrations\\20240928140802_create.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAB8AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T14:08:02.346Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Auctions.Database.csproj",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Auctions.Database.csproj",
+              "RelativeDocumentMoniker": "Auctions.Database\\Auctions.Database.csproj",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Auctions.Database.csproj",
+              "RelativeToolTip": "Auctions.Database\\Auctions.Database.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAtwA4AAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-22T18:50:18.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "CancelAuctionCommandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\CancelAuction\\CancelAuctionCommandValidator.cs",
+              "RelativeDocumentMoniker": "Application\\Auctions\\CancelAuction\\CancelAuctionCommandValidator.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\CancelAuction\\CancelAuctionCommandValidator.cs",
+              "RelativeToolTip": "Application\\Auctions\\CancelAuction\\CancelAuctionCommandValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T06:33:08.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "GetAuctionCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\GetAuction\\GetAuctionCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Auctions\\GetAuction\\GetAuctionCommandHandler.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\GetAuction\\GetAuctionCommandHandler.cs",
+              "RelativeToolTip": "Application\\Auctions\\GetAuction\\GetAuctionCommandHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T07:42:26.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ChangeAuctionCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\ChangeAuction\\ChangeAuctionCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Auctions\\ChangeAuction\\ChangeAuctionCommandHandler.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\ChangeAuction\\ChangeAuctionCommandHandler.cs",
+              "RelativeToolTip": "Application\\Auctions\\ChangeAuction\\ChangeAuctionCommandHandler.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAEBkwAoAAABWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T06:46:11.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "CancelAuctionCommand.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\CancelAuction\\CancelAuctionCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Auctions\\CancelAuction\\CancelAuctionCommand.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\CancelAuction\\CancelAuctionCommand.cs",
+              "RelativeToolTip": "Application\\Auctions\\CancelAuction\\CancelAuctionCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T06:31:57.994Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Auctions\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions\\appsettings.Development.json",
+              "RelativeToolTip": "Auctions\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-22T20:01:25.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Auctions.Infrastructure.csproj",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Infrastructure\\Auctions.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "Auctions.Infrastructure\\Auctions.Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Infrastructure\\Auctions.Infrastructure.csproj",
+              "RelativeToolTip": "Auctions.Infrastructure\\Auctions.Infrastructure.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-24T07:35:22.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "20240924065513_AddAuctionEntity.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240924065513_AddAuctionEntity.cs",
+              "RelativeDocumentMoniker": "Auctions.Database\\Migrations\\20240924065513_AddAuctionEntity.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions.Database\\Migrations\\20240924065513_AddAuctionEntity.cs",
+              "RelativeToolTip": "Auctions.Database\\Migrations\\20240924065513_AddAuctionEntity.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T06:55:13.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "BetsController.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions\\Controllers\\BetsController.cs",
+              "RelativeDocumentMoniker": "Auctions\\Controllers\\BetsController.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions\\Controllers\\BetsController.cs",
+              "RelativeToolTip": "Auctions\\Controllers\\BetsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T07:24:07.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "GetAuctionCommand.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\GetAuction\\GetAuctionCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Auctions\\GetAuction\\GetAuctionCommand.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\GetAuction\\GetAuctionCommand.cs",
+              "RelativeToolTip": "Application\\Auctions\\GetAuction\\GetAuctionCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAABRwAkAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T07:41:43.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "GetAuctionCommandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\GetAuction\\GetAuctionCommandValidator.cs",
+              "RelativeDocumentMoniker": "Application\\Auctions\\GetAuction\\GetAuctionCommandValidator.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Application\\Auctions\\GetAuction\\GetAuctionCommandValidator.cs",
+              "RelativeToolTip": "Application\\Auctions\\GetAuction\\GetAuctionCommandValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T07:42:29.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions\\appsettings.json",
+              "RelativeDocumentMoniker": "Auctions\\appsettings.json",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions\\appsettings.json",
+              "RelativeToolTip": "Auctions\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-22T20:05:25.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "LotsController.cs",
+              "DocumentMoniker": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions\\Controllers\\LotsController.cs",
+              "RelativeDocumentMoniker": "Auctions\\Controllers\\LotsController.cs",
+              "ToolTip": "C:\\Users\\bogda\\source\\repos\\Auctions\\Auctions\\Controllers\\LotsController.cs",
+              "RelativeToolTip": "Auctions\\Controllers\\LotsController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAADwvxQAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T07:17:29.583Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
