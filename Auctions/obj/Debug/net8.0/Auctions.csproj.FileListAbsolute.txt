@@ -116,3 +116,4 @@ C:\Users\bogda\source\repos\Auctions\Auctions\bin\Debug\net8.0\zh-Hant\Microsoft
 C:\Users\bogda\source\repos\Auctions\Auctions\bin\Debug\net8.0\Auctions.Database.dll
 C:\Users\bogda\source\repos\Auctions\Auctions\bin\Debug\net8.0\Auctions.Database.pdb
 C:\Users\bogda\source\repos\Auctions\Auctions\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\bogda\source\repos\Auctions\Auctions\obj\Debug\net8.0\Auctions.sourcelink.json

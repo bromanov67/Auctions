@@ -28,8 +28,8 @@ namespace Users.Controllers
 
             try
             {
-                await _mediator.Send(command, cancellationToken);
-                return Ok();
+                var user = await _mediator.Send(command, cancellationToken);
+                return Ok(user);
             }
             catch (Exception ex)
             {
