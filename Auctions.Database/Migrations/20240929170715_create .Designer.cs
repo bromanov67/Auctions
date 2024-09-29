@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Auctions.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,10 +12,12 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Auctions.Database.Migrations
 {
-    [DbContext(typeof(AuctionsDbContext))]
-    partial class AuctionsDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(ApplicationDbContext))]
+    [Migration("20240929170715_create ")]
+    partial class create
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,11 +28,9 @@ namespace Auctions.Database.Migrations
 
             modelBuilder.Entity("Database.AuctionEntity", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                        .HasColumnType("uuid");
 
                     b.Property<DateTime>("DateEnd")
                         .HasColumnType("timestamp with time zone");
@@ -44,23 +45,21 @@ namespace Auctions.Database.Migrations
                     b.Property<int?>("Status")
                         .HasColumnType("integer");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("integer");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
 
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("auction");
+                    b.ToTable("Auctions");
                 });
 
             modelBuilder.Entity("Database.BetEntity", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                        .HasColumnType("uuid");
 
                     b.Property<decimal>("Amount")
                         .HasColumnType("numeric");
@@ -68,11 +67,11 @@ namespace Auctions.Database.Migrations
                     b.Property<DateTime>("DateTime")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int>("LotId")
-                        .HasColumnType("integer");
+                    b.Property<Guid>("LotId")
+                        .HasColumnType("uuid");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("integer");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
 
                     b.HasKey("Id");
 
@@ -80,19 +79,17 @@ namespace Auctions.Database.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("bet");
+                    b.ToTable("Bets");
                 });
 
             modelBuilder.Entity("Database.LotEntity", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("uuid");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("AuctionId")
-                        .HasColumnType("integer");
+                    b.Property<Guid>("AuctionId")
+                        .HasColumnType("uuid");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -109,8 +106,8 @@ namespace Auctions.Database.Migrations
                     b.Property<int?>("Status")
                         .HasColumnType("integer");
 
-                    b.Property<int?>("UserEntityId")
-                        .HasColumnType("integer");
+                    b.Property<Guid?>("UserEntityId")
+                        .HasColumnType("uuid");
 
                     b.HasKey("Id");
 
@@ -118,16 +115,14 @@ namespace Auctions.Database.Migrations
 
                     b.HasIndex("UserEntityId");
 
-                    b.ToTable("lot");
+                    b.ToTable("Lots");
                 });
 
             modelBuilder.Entity("Database.UserEntity", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                        .HasColumnType("uuid");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -139,7 +134,7 @@ namespace Auctions.Database.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("user");
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("Database.AuctionEntity", b =>

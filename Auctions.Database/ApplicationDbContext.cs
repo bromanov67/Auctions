@@ -5,22 +5,22 @@ using Microsoft.Extensions.Configuration;
 
 namespace Auctions.Database
 {
-    public class AuctionsDbContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
         private readonly IConfiguration _configuration;
 
-        public AuctionsDbContext(IConfiguration configuration)
+        public ApplicationDbContext(IConfiguration configuration)
         {
             _configuration = configuration;
         }
 
-        public DbSet<LotEntity> lot { get; set; }
+        public DbSet<LotEntity> Lots { get; set; }
 
-        public DbSet<AuctionEntity>? auction { get; set; }
+        public DbSet<AuctionEntity>? Auctions { get; set; }
 
-        public DbSet<BetEntity>? bet { get; set; }
+        public DbSet<BetEntity>? Bets { get; set; }
 
-        public DbSet<UserEntity>? user { get; set; }
+        public DbSet<UserEntity>? Users { get; set; }
 
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)

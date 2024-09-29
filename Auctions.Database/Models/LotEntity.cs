@@ -5,9 +5,9 @@ namespace Database
 {
     public class LotEntity
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
-        public int AuctionId { get; set; }
+        public Guid AuctionId { get; set; }
 
         public AuctionEntity? AuctionEntity { get; set; }
 

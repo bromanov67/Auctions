@@ -7,16 +7,11 @@ namespace Auctions.Database
 {
     public class UserRepository : IUserRepository, IDisposable
     {
-        private readonly AuctionsDbContext _dbContext;
+        private readonly ApplicationDbContext _dbContext;
 
-        public UserRepository(AuctionsDbContext dbContext)
+        public UserRepository(ApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
-        }
-
-        public async Task<User> GetByIdAsync(int auctionId)
-        {
-            return await _dbContext.Set<User>().FirstOrDefaultAsync(a => a.Id == auctionId);
         }
 
         public async Task<IEnumerable<User>> GetAllAsync()
@@ -24,38 +19,38 @@ namespace Auctions.Database
             return await _dbContext.Set<User>().ToListAsync();
         }
 
-        public async Task CreateAsync(User auction)
+        public async Task CreateAsync(User user)
         {
-            var auctionEntity = new UserEntity
+            var userEntity = new UserEntity
             {
-                Id = auction.Id,
-                Name = auction.Name,
-                Email = auction.Email
-  
+                Id = user.Id,
+                Name = user.Name,
+                Email = user.Email
+
             };
-            await _dbContext.Set<UserEntity>().AddAsync(auctionEntity);
+            _dbContext.Set<UserEntity>().Add(userEntity);
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task ChangeAsync(User auction)
+        public async Task ChangeAsync(User user)
         {
-            _dbContext.Set<User>().Update(auction);
+            _dbContext.Set<User>().Update(user);
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task CancelAsync(int auctionId)
+        public async Task CancelAsync(Guid userId)
         {
     /*        // Получаем аукцион по идентификатору
-            var auction = await _dbContext.Set<User>().FirstOrDefaultAsync(a => a.Id == auctionId);
+            var user = await _dbContext.Set<User>().FirstOrDefaultAsync(a => a.Id == userId);
 
             // Проверяем, что аукцион еще не был отменен
-            if (auction?.IsCanceled ?? true)
+            if (uder?.IsCanceled ?? true)
             {
                 throw new InvalidOperationException("Аукцион уже был отменен.");
             }
 
             // Отменяем аукцион
-            auction.IsCanceled = true;
+            user.IsCanceled = true;
 
             // Сохраняем изменения в базе данных
             await _dbContext.SaveChangesAsync();*/
@@ -80,6 +75,7 @@ namespace Auctions.Database
             Dispose(true);
             GC.SuppressFinalize(this);
         }
+
     }
 
 }

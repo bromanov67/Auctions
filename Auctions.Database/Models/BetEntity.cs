@@ -2,13 +2,13 @@
 {
     public class BetEntity
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
 
         public UserEntity? UserEntity { get; set; }
 
-        public int LotId { get; set;}
+        public Guid LotId { get; set;}
 
         public LotEntity? LotEntity { get; set; }
 

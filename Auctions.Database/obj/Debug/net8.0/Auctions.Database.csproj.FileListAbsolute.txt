@@ -17,3 +17,4 @@ C:\Users\bogda\source\repos\Auctions\Auctions.Database\bin\Debug\net8.0\Auctions
 C:\Users\bogda\source\repos\Auctions\Auctions.Database\bin\Debug\net8.0\Auctions.Application.pdb
 C:\Users\bogda\source\repos\Auctions\Auctions.Database\bin\Debug\net8.0\Auctions.Domain.pdb
 C:\Users\bogda\source\repos\Auctions\Auctions.Database\obj\Debug\net8.0\Auctions.9425446C.Up2Date
+C:\Users\bogda\source\repos\Auctions\Auctions.Database\obj\Debug\net8.0\Auctions.Database.sourcelink.json

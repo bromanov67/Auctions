@@ -7,21 +7,25 @@ namespace Auctions.Database
 {
     public class AuctionRepository : IAuctionRepository, IDisposable
     {
-        private readonly AuctionsDbContext _dbContext;
+        private readonly ApplicationDbContext _dbContext;
 
-        public AuctionRepository(AuctionsDbContext dbContext)
+        public AuctionRepository(ApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
         }
 
-        public async Task<Auction> GetByIdAsync(int auctionId)
-        {
-            return await _dbContext.Set<Auction>().FirstOrDefaultAsync(a => a.Id == auctionId);
-        }
 
         public async Task<IEnumerable<Auction>> GetAllAsync() 
         {
-            return await _dbContext.Set<Auction>().ToListAsync();
+            var auctionEntities = await _dbContext.Set<AuctionEntity>().ToListAsync();
+            return auctionEntities.Select(e => new Auction
+            {
+                Id = e.Id,
+                Name = e.Name,
+                UserId = e.UserId,
+                DateStart = e.DateStart,
+                DateEnd = e.DateEnd
+            }).ToList();
         }
 
         public async Task CreateAsync(Auction auction )
@@ -35,7 +39,7 @@ namespace Auctions.Database
                 Status = (AuctionStatusEntity?)auction.Status,
                 DateEnd = auction.DateEnd
             };
-             _dbContext.Set<AuctionEntity>().Add(auctionEntity);
+            _dbContext.Set<AuctionEntity>().Add(auctionEntity);
             await _dbContext.SaveChangesAsync();
         }
 
@@ -45,7 +49,7 @@ namespace Auctions.Database
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task CancelAsync(int auctionId)
+        public async Task CancelAsync(Guid auctionId)
         {
             // Получаем аукцион по идентификатору
             var auction = await _dbContext.Set<Auction>().FirstOrDefaultAsync(a => a.Id == auctionId);
@@ -82,6 +86,8 @@ namespace Auctions.Database
             Dispose(true);
             GC.SuppressFinalize(this);
         }
+
+        
     }
 
 }

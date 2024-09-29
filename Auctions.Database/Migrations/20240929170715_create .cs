@@ -1,39 +1,36 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
 namespace Auctions.Database.Migrations
 {
     /// <inheritdoc />
-    public partial class createe : Migration
+    public partial class create : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "user",
+                name: "Users",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
                     Email = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_user", x => x.Id);
+                    table.PrimaryKey("PK_Users", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "auction",
+                name: "Auctions",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    UserId = table.Column<int>(type: "integer", nullable: false),
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    UserId = table.Column<Guid>(type: "uuid", nullable: false),
                     Status = table.Column<int>(type: "integer", nullable: true),
                     Name = table.Column<string>(type: "text", nullable: false),
                     DateStart = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
@@ -41,95 +38,93 @@ namespace Auctions.Database.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_auction", x => x.Id);
+                    table.PrimaryKey("PK_Auctions", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_auction_user_UserId",
+                        name: "FK_Auctions_Users_UserId",
                         column: x => x.UserId,
-                        principalTable: "user",
+                        principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "lot",
+                name: "Lots",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    AuctionId = table.Column<int>(type: "integer", nullable: false),
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    AuctionId = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
                     Status = table.Column<int>(type: "integer", nullable: true),
                     Description = table.Column<string>(type: "text", nullable: false),
                     Images = table.Column<List<string>>(type: "text[]", nullable: false),
-                    UserEntityId = table.Column<int>(type: "integer", nullable: true)
+                    UserEntityId = table.Column<Guid>(type: "uuid", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_lot", x => x.Id);
+                    table.PrimaryKey("PK_Lots", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_lot_auction_AuctionId",
+                        name: "FK_Lots_Auctions_AuctionId",
                         column: x => x.AuctionId,
-                        principalTable: "auction",
+                        principalTable: "Auctions",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_lot_user_UserEntityId",
+                        name: "FK_Lots_Users_UserEntityId",
                         column: x => x.UserEntityId,
-                        principalTable: "user",
+                        principalTable: "Users",
                         principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
-                name: "bet",
+                name: "Bets",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    UserId = table.Column<int>(type: "integer", nullable: false),
-                    LotId = table.Column<int>(type: "integer", nullable: false),
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    UserId = table.Column<Guid>(type: "uuid", nullable: false),
+                    LotId = table.Column<Guid>(type: "uuid", nullable: false),
                     Amount = table.Column<decimal>(type: "numeric", nullable: false),
                     DateTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_bet", x => x.Id);
+                    table.PrimaryKey("PK_Bets", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_bet_lot_LotId",
+                        name: "FK_Bets_Lots_LotId",
                         column: x => x.LotId,
-                        principalTable: "lot",
+                        principalTable: "Lots",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_bet_user_UserId",
+                        name: "FK_Bets_Users_UserId",
                         column: x => x.UserId,
-                        principalTable: "user",
+                        principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_auction_UserId",
-                table: "auction",
+                name: "IX_Auctions_UserId",
+                table: "Auctions",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_bet_LotId",
-                table: "bet",
+                name: "IX_Bets_LotId",
+                table: "Bets",
                 column: "LotId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_bet_UserId",
-                table: "bet",
+                name: "IX_Bets_UserId",
+                table: "Bets",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_lot_AuctionId",
-                table: "lot",
+                name: "IX_Lots_AuctionId",
+                table: "Lots",
                 column: "AuctionId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_lot_UserEntityId",
-                table: "lot",
+                name: "IX_Lots_UserEntityId",
+                table: "Lots",
                 column: "UserEntityId");
         }
 
@@ -137,16 +132,16 @@ namespace Auctions.Database.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "bet");
+                name: "Bets");
 
             migrationBuilder.DropTable(
-                name: "lot");
+                name: "Lots");
 
             migrationBuilder.DropTable(
-                name: "auction");
+                name: "Auctions");
 
             migrationBuilder.DropTable(
-                name: "user");
+                name: "Users");
         }
     }
 }
