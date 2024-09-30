@@ -14,12 +14,12 @@ namespace Auctions.Database
             _dbContext = dbContext;
         }
 
-        public async Task<IEnumerable<User>> GetAllAsync()
+        public async Task<IEnumerable<User>> GetAllAsync(CancellationToken cancellationToken)
         {
             return await _dbContext.Set<User>().ToListAsync();
         }
 
-        public async Task CreateAsync(User user)
+        public async Task CreateAsync(User user, CancellationToken cancellationToken)
         {
             var userEntity = new UserEntity
             {
@@ -32,13 +32,13 @@ namespace Auctions.Database
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task ChangeAsync(User user)
+        public async Task ChangeAsync(User user, CancellationToken cancellationToken)
         {
             _dbContext.Set<User>().Update(user);
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task CancelAsync(Guid userId)
+        public async Task CancelAsync(Guid userId, CancellationToken cancellationToken)
         {
     /*        // Получаем аукцион по идентификатору
             var user = await _dbContext.Set<User>().FirstOrDefaultAsync(a => a.Id == userId);

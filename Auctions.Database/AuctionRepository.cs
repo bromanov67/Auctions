@@ -12,10 +12,11 @@ namespace Auctions.Database
         public AuctionRepository(ApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
+
         }
 
 
-        public async Task<IEnumerable<Auction>> GetAllAsync() 
+        public async Task<IEnumerable<Auction>> GetAllAsync(CancellationToken cancellationToken) 
         {
             var auctionEntities = await _dbContext.Set<AuctionEntity>().ToListAsync();
             return auctionEntities.Select(e => new Auction
@@ -28,7 +29,7 @@ namespace Auctions.Database
             }).ToList();
         }
 
-        public async Task CreateAsync(Auction auction )
+        public async Task CreateAsync(Auction auction, CancellationToken cancellationToken)
         {
             var auctionEntity = new AuctionEntity
             {
@@ -43,29 +44,34 @@ namespace Auctions.Database
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task ChangeAsync(Auction auction)
-        {
-            _dbContext.Set<Auction>().Update(auction);
-            await _dbContext.SaveChangesAsync();
-        }
-
-        public async Task CancelAsync(Guid auctionId)
+        
+        public async Task CancelAsync(Guid auctionId, CancellationToken cancellationToken)
         {
             // Получаем аукцион по идентификатору
-            var auction = await _dbContext.Set<Auction>().FirstOrDefaultAsync(a => a.Id == auctionId);
+            var auctionEntity = await _dbContext.Set<AuctionEntity>().FirstOrDefaultAsync(a => a.Id == auctionId, cancellationToken);
 
             // Проверяем, что аукцион еще не был отменен
-            if (auction?.IsCanceled ?? true)
+            if (auctionEntity != null && !auctionEntity.IsCanceled)
+            {
+                // Отменяем аукцион
+                auctionEntity.IsCanceled = true;
+
+                // Сохраняем изменения в базе данных
+                await _dbContext.SaveChangesAsync(cancellationToken);
+            }   
+            else
             {
                 throw new InvalidOperationException("Аукцион уже был отменен.");
             }
-
-            // Отменяем аукцион
-            auction.IsCanceled = true;
-
-            // Сохраняем изменения в базе данных
-            await _dbContext.SaveChangesAsync();
         }
+
+
+        public async Task ChangeAsync(Auction auction, CancellationToken cancellationToken)
+        {
+            /*_dbContext.Set<Auction>().Update(auction);
+            await _dbContext.SaveChangesAsync(cancellationToken);*/
+        }
+
 
 
         private bool disposed = false;

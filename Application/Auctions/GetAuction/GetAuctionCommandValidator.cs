@@ -6,7 +6,8 @@ namespace Auctions.Application.Auctions.GetAuction
     {
         public GetAuctionCommandValidator()
         {
-/*            RuleFor(x => x.AuctionId).GreaterThan(0).WithMessage("Invalid Auction Id.");
-*/        }
+            /*RuleFor(x => x.AuctionId).GreaterThan(0).WithMessage("Invalid Auction Id.");*/
+            /*RuleFor(x => x.)*/
+        }
     }
 }

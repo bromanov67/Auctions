@@ -16,12 +16,7 @@ namespace Auctions.Application.Auctions.GetAuction
 
         public async Task<Result<IEnumerable<Auction>>> Handle(GetAuctionCommand command, CancellationToken cancellationToken)
         {
-            var allAuctions = await _auctionRepository.GetAllAsync();
-
-            if (allAuctions == null || !allAuctions.Any())
-            {
-                return Result.Fail("Аукционы не найдены");
-            }
+            var allAuctions = await _auctionRepository.GetAllAsync(cancellationToken);
 
             return Result.Ok(allAuctions); // Return all auctions
         }

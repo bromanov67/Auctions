@@ -17,7 +17,7 @@ namespace Auctions.Application.User.CreateUser
         {
 
             var user = new Domain.User(command.Name, command.Email, command.Id);
-            await _userRepository.CreateAsync(user);
+            await _userRepository.CreateAsync(user, cancellationToken);
             return Result.Ok(user.Id);
 
         }

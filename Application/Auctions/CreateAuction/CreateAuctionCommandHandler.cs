@@ -4,7 +4,7 @@ using MediatR;
 
 namespace Auctions.Application.Auctions.CreateAuction
 {
-    
+
     public class CreateAuctionCommandHandler : IRequestHandler<CreateAuctionCommand, Result<Guid>>
     {
         private readonly IAuctionRepository _auctionRepository;
@@ -17,7 +17,7 @@ namespace Auctions.Application.Auctions.CreateAuction
         {
 
             var auction = new Auction(command.Name, command.UserId, command.DateStart, command.DateEnd);
-            await _auctionRepository.CreateAsync(auction);
+            await _auctionRepository.CreateAsync(auction, cancellationToken);
             return Result.Ok(auction.Id);
 
         }

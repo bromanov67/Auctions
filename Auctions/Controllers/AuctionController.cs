@@ -1,5 +1,6 @@
 ﻿using Auctions.Application.Auctions.CreateAuction;
 using Auctions.Application.Auctions.GetAuction;
+using Domain;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -46,15 +47,22 @@ namespace Auctions.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> CancelAuctionAsync(CancelAuctionCommand command, CancellationToken cancellationToken)
+        public async Task<IActionResult> CancelAuctionAsync(Guid auctionId, CancellationToken cancellationToken)
         {
+            var command = new CancelAuctionCommand { AuctionId = auctionId };
             var validateResult = await _cancelAuctionCommandValidator.ValidateAsync(command, cancellationToken);
             if (!validateResult.IsValid)
                 return BadRequest(new { errors = validateResult.Errors.Select(x => x.ErrorMessage) });
 
-            await _mediator.Send(command, cancellationToken);
-
-            return Ok();
+            try
+            {
+                await _mediator.Send(command, cancellationToken);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { errors = ex.ToString() });
+            }
         }
 
         [HttpPut]

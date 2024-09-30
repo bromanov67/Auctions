@@ -8,6 +8,10 @@
 
         public AuctionStatusEntity? Status { get; set; }
 
+        public bool IsCreation { get; set; }
+
+        public bool IsCanceled { get; set; }
+
         public UserEntity? UserEntity { get; set; }
 
         public string Name {  get; set; } = string.Empty;
@@ -17,6 +21,7 @@
         public DateTime DateStart { get; set; } 
 
         public DateTime DateEnd { get; set; }
+
 
     }
 }

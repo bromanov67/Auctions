@@ -15,11 +15,17 @@ namespace Auctions.Application.Auctions.CancelAuction
 
         public async Task<Result> Handle(CancelAuctionCommand command, CancellationToken cancellationToken)
         {
-  
-            // Отмена аукциона
-            await _auctionRepository.CancelAsync(command.AuctionId);
 
-            return Result.Ok();
+            try
+            {
+                // Отмена аукциона
+                await _auctionRepository.CancelAsync(command.AuctionId, cancellationToken);
+                return Result.Ok();
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail(ex.Message);
+            }
         }
     }
 

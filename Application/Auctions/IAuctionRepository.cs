@@ -4,10 +4,10 @@ namespace Auctions.Application.Auctions
 {
     public interface IAuctionRepository
     {
-        public Task<IEnumerable<Auction>> GetAllAsync();
-        public Task CreateAsync(Auction auction);
-        public Task ChangeAsync(Auction auction);
-        public Task CancelAsync(Guid auctionId);    
+        public Task<IEnumerable<Auction>> GetAllAsync(CancellationToken cancellationToken);
+        public Task CreateAsync(Auction auction, CancellationToken cancellationToken);
+        public Task ChangeAsync(Auction auction, CancellationToken cancellationToken);
+        public Task CancelAsync(Guid auctionId, CancellationToken cancellationToken);    
     }
 
 }

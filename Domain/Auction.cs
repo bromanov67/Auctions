@@ -54,7 +54,10 @@ namespace Domain
                 if (dateTimeNow > DateStart && dateTimeNow < DateEnd)
                     return AuctionStatus.Bidding;
 
-                return AuctionStatus.Complete;
+                if (dateTimeNow > DateEnd)
+                    return AuctionStatus.Complete;
+                else
+                    return AuctionStatus.Canceled;
 
             }
         }
