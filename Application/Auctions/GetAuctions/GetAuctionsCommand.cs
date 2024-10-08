@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 
 namespace Auctions.Application.Auctions.GetAuction
 {
-    public record GetAuctionCommand : IRequest<Result<IEnumerable<Auction>>>
+    public record GetAuctionsCommand : IRequest<Result<IEnumerable<Auction>>>
     {
 
     }

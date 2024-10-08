@@ -2,9 +2,9 @@
 
 namespace Auctions.Application.Auctions.GetAuction
 {
-    public class GetAuctionCommandValidator : AbstractValidator<GetAuctionCommand>
+    public class GetAuctionsCommandValidator : AbstractValidator<GetAuctionsCommand>
     {
-        public GetAuctionCommandValidator()
+        public GetAuctionsCommandValidator()
         {
             /*RuleFor(x => x.AuctionId).GreaterThan(0).WithMessage("Invalid Auction Id.");*/
             /*RuleFor(x => x.)*/

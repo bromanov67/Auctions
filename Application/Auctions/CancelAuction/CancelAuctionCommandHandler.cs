@@ -13,6 +13,7 @@ namespace Auctions.Application.Auctions.CancelAuction
             _auctionRepository = auctionRepository;
         }
 
+
         public async Task<Result> Handle(CancelAuctionCommand command, CancellationToken cancellationToken)
         {
 

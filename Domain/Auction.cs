@@ -58,7 +58,6 @@ namespace Domain
                     return AuctionStatus.Complete;
                 else
                     return AuctionStatus.Canceled;
-
             }
         }
         public Auction() { }

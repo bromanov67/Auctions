@@ -1,21 +1,9 @@
 ﻿using FluentResults;
 using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using System.Text.Json.Serialization;
 
-namespace Auctions.Application.Auctions.CreateAuction
+namespace Auctions.Application.Auctions.ChangeAuction
 {
-    public record CreateActionCommand :IRequest<Result>
-    {
-        [JsonPropertyName("name")]
-        public string Name { get; set; }
-
-
-        [JsonPropertyName("dateStart")]
-        public DateTime DateStart { get; set; }
-
-
-        [JsonPropertyName("dateEnd")]
-        public DateTime DateEnd { get; set; }
-
-    }
+    public record ChangeAuctionCommand(Guid AuctionId, string Name, DateTime DateStart, DateTime DateEnd) : IRequest<Unit>;
 }

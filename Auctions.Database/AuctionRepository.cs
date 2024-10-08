@@ -1,4 +1,5 @@
 ﻿using Auctions.Application.Auctions;
+using Auctions.Database.Migrations;
 using Database;
 using Domain;
 using Microsoft.EntityFrameworkCore;
@@ -27,6 +28,7 @@ namespace Auctions.Database
                 DateStart = e.DateStart,
                 DateEnd = e.DateEnd
             }).ToList();
+            
         }
 
         public async Task CreateAsync(Auction auction, CancellationToken cancellationToken)
@@ -41,22 +43,18 @@ namespace Auctions.Database
                 DateEnd = auction.DateEnd
             };
             _dbContext.Set<AuctionEntity>().Add(auctionEntity);
-            await _dbContext.SaveChangesAsync();
+            await _dbContext.SaveChangesAsync(cancellationToken);
         }
 
         
         public async Task CancelAsync(Guid auctionId, CancellationToken cancellationToken)
         {
-            // Получаем аукцион по идентификатору
             var auctionEntity = await _dbContext.Set<AuctionEntity>().FirstOrDefaultAsync(a => a.Id == auctionId, cancellationToken);
 
-            // Проверяем, что аукцион еще не был отменен
             if (auctionEntity != null && !auctionEntity.IsCanceled)
             {
-                // Отменяем аукцион
                 auctionEntity.IsCanceled = true;
 
-                // Сохраняем изменения в базе данных
                 await _dbContext.SaveChangesAsync(cancellationToken);
             }   
             else
@@ -66,11 +64,24 @@ namespace Auctions.Database
         }
 
 
-        public async Task ChangeAsync(Auction auction, CancellationToken cancellationToken)
+        public async Task ChangeAsync(Guid auctionId, string name, DateTime dateStart, DateTime dateEnd, CancellationToken cancellationToken)
         {
-            /*_dbContext.Set<Auction>().Update(auction);
-            await _dbContext.SaveChangesAsync(cancellationToken);*/
+            var auctionEntity = await _dbContext.Set<AuctionEntity>()
+                .FirstOrDefaultAsync(a => a.Id == auctionId, cancellationToken);
+
+            if (auctionEntity == null)
+            {
+                throw new InvalidOperationException($"Аукцион с id {auctionId} не найден.");
+            }
+
+            auctionEntity.DateStart = dateStart;
+            auctionEntity.DateEnd = dateEnd;
+            auctionEntity.Name = name;
+
+            _dbContext.Auctions?.Update(auctionEntity);
+            await _dbContext.SaveChangesAsync(cancellationToken);
         }
+
 
 
 

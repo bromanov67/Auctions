@@ -1,9 +1,11 @@
-﻿using Auctions.Application.Auctions.CreateAuction;
+﻿using Auctions.Application.Auctions.ChangeAuction;
+using Auctions.Application.Auctions.CreateAuction;
 using Auctions.Application.Auctions.GetAuction;
 using Domain;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace Auctions.Controllers
 {
@@ -14,13 +16,13 @@ namespace Auctions.Controllers
         private readonly IMediator _mediator;
         private readonly IValidator<CreateAuctionCommand> _createAuctionCommandValidator;
         private readonly IValidator<CancelAuctionCommand> _cancelAuctionCommandValidator;
-        private readonly IValidator<GetAuctionCommand> _getAuctionCommandValidator;
+        private readonly IValidator<GetAuctionsCommand> _getAuctionCommandValidator;
 
 
         public AuctionController(IMediator mediator,
             IValidator<CreateAuctionCommand> createValidator,
             IValidator<CancelAuctionCommand> cancelValidator,
-            IValidator<GetAuctionCommand> getAuctionCommandValidator)
+            IValidator<GetAuctionsCommand> getAuctionCommandValidator)
         {
             _mediator = mediator;
             _createAuctionCommandValidator = createValidator;
@@ -64,17 +66,17 @@ namespace Auctions.Controllers
                 return BadRequest(new { errors = ex.ToString() });
             }
         }
-
         [HttpPut]
-        public async Task<IActionResult> ChangeAuctionAsync()
+        public async Task<IActionResult> ChangeAuction(Guid id, ChangeAuctionCommand command, CancellationToken cancellationToken)
         {
-            return Ok();
+            await _mediator.Send(new ChangeAuctionCommand(id, command.Name, command.DateStart, command.DateEnd), cancellationToken);
+            return NoContent();
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAuctionsAsync(CancellationToken cancellationToken)
         {
-            var command = new GetAuctionCommand();
+            var command = new GetAuctionsCommand();
             var validateResult = await _getAuctionCommandValidator.ValidateAsync(command, cancellationToken);
             if (!validateResult.IsValid)
                 return BadRequest(new { errors = validateResult.Errors.Select(x => x.ErrorMessage) });

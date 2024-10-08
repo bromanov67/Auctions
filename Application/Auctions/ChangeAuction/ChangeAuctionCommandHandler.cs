@@ -1,17 +1,27 @@
 ﻿using Domain;
 using FluentResults;
 using MediatR;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 
-namespace Auctions.Application.Auctions.CreateAuction
+namespace Auctions.Application.Auctions.ChangeAuction
 {
-    /*public class ChangeAuctionCommandHandler : IRequestHandler<ChangeAuctionCommand, Result>
+    public class ChangeAuctionHandler : IRequestHandler<ChangeAuctionCommand, Unit>
     {
-        public Task<Result> Handle(CreateActionCommand command, CancellationToken cancellationToken)
-        {
-            var auction = new Auction(command.Name, command.DateStart, command.DateEnd, command);
+        private readonly IAuctionRepository _auctionRepository;
 
-            return Task.FromResult(Result.Ok());
+        public ChangeAuctionHandler(IAuctionRepository auctionRepository)
+        {
+            _auctionRepository = auctionRepository;
         }
-    }*/
+
+        public async Task<Unit> Handle(ChangeAuctionCommand command, CancellationToken cancellationToken)
+        {
+            // Обновляем аукцион по id
+            await _auctionRepository.ChangeAsync(command.AuctionId, command.Name, command.DateStart, command.DateEnd, cancellationToken);
+
+            return Unit.Value;
+        }
+    }
+
 }
- 

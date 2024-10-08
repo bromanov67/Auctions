@@ -1,4 +1,6 @@
 using Auctions.Application.Auctions;
+using Auctions.Application.Auctions.CancelAuction;
+using Auctions.Application.Auctions.ChangeAuction;
 using Auctions.Application.Auctions.CreateAuction;
 using Auctions.Application.Auctions.GetAuction;
 using Auctions.Application.User.CreateUser;
@@ -18,11 +20,14 @@ builder.Services.AddMediatR(config => config.RegisterServicesFromAssemblies(AppD
 // Регистрация всех валидаторов
 builder.Services.AddValidatorsFromAssemblyContaining<CreateAuctionCommandValidator>();
 
-builder.Services.AddValidatorsFromAssemblyContaining<GetAuctionCommandValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<GetAuctionsCommandValidator>();
+
+builder.Services.AddValidatorsFromAssemblyContaining<ChangeAuctionCommandValidator>();
 
 builder.Services.AddValidatorsFromAssemblyContaining<CancelAuctionCommandValidator>();
 
 builder.Services.AddValidatorsFromAssemblyContaining<CreateUserCommandValidator>();
+
 
 
 builder.Services.AddScoped<IAuctionRepository, AuctionRepository>();

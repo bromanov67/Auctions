@@ -5,16 +5,16 @@ using System;
 
 namespace Auctions.Application.Auctions.GetAuction
 {
-    public class GetAuctionCommandHandler : IRequestHandler<GetAuctionCommand, Result<IEnumerable<Auction>>>
+    public class GetAuctionsCommandHandler : IRequestHandler<GetAuctionsCommand, Result<IEnumerable<Auction>>>
     {
         private readonly IAuctionRepository _auctionRepository;
 
-        public GetAuctionCommandHandler(IAuctionRepository auctionRepository)
+        public GetAuctionsCommandHandler(IAuctionRepository auctionRepository)
         {
             _auctionRepository = auctionRepository;
         }
 
-        public async Task<Result<IEnumerable<Auction>>> Handle(GetAuctionCommand command, CancellationToken cancellationToken)
+        public async Task<Result<IEnumerable<Auction>>> Handle(GetAuctionsCommand command, CancellationToken cancellationToken)
         {
             var allAuctions = await _auctionRepository.GetAllAsync(cancellationToken);
 
