@@ -1,11 +1,9 @@
 ﻿using Auctions.Application.Auctions.ChangeAuction;
 using Auctions.Application.Auctions.CreateAuction;
 using Auctions.Application.Auctions.GetAuction;
-using Domain;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace Auctions.Controllers
 {
@@ -17,17 +15,20 @@ namespace Auctions.Controllers
         private readonly IValidator<CreateAuctionCommand> _createAuctionCommandValidator;
         private readonly IValidator<CancelAuctionCommand> _cancelAuctionCommandValidator;
         private readonly IValidator<GetAuctionsCommand> _getAuctionCommandValidator;
+        private readonly IValidator<ChangeAuctionCommand> _changeAuctionCommandValidator;
 
 
         public AuctionController(IMediator mediator,
             IValidator<CreateAuctionCommand> createValidator,
             IValidator<CancelAuctionCommand> cancelValidator,
-            IValidator<GetAuctionsCommand> getAuctionCommandValidator)
+            IValidator<GetAuctionsCommand> getValidator,
+            IValidator<ChangeAuctionCommand> changeValidator)
         {
             _mediator = mediator;
             _createAuctionCommandValidator = createValidator;
             _cancelAuctionCommandValidator = cancelValidator;
-            _getAuctionCommandValidator = getAuctionCommandValidator;
+            _getAuctionCommandValidator = getValidator;
+            _changeAuctionCommandValidator = changeValidator;
         }
 
         [HttpPost]
@@ -69,6 +70,10 @@ namespace Auctions.Controllers
         [HttpPut]
         public async Task<IActionResult> ChangeAuction(Guid id, ChangeAuctionCommand command, CancellationToken cancellationToken)
         {
+            var validateResult = await _changeAuctionCommandValidator.ValidateAsync(command, cancellationToken);
+            if (!validateResult.IsValid)
+                return BadRequest(new { errors = validateResult.Errors.Select(x => x.ErrorMessage) });
+
             await _mediator.Send(new ChangeAuctionCommand(id, command.Name, command.DateStart, command.DateEnd), cancellationToken);
             return NoContent();
         }

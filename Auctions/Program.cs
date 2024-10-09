@@ -3,6 +3,7 @@ using Auctions.Application.Auctions.CancelAuction;
 using Auctions.Application.Auctions.ChangeAuction;
 using Auctions.Application.Auctions.CreateAuction;
 using Auctions.Application.Auctions.GetAuction;
+using Auctions.Application.Lots;
 using Auctions.Application.User.CreateUser;
 using Auctions.Application.Users;
 using Auctions.Database;
@@ -28,12 +29,15 @@ builder.Services.AddValidatorsFromAssemblyContaining<CancelAuctionCommandValidat
 
 builder.Services.AddValidatorsFromAssemblyContaining<CreateUserCommandValidator>();
 
+builder.Services.AddValidatorsFromAssemblyContaining<CreateUserCommandValidator>();
+
 
 
 builder.Services.AddScoped<IAuctionRepository, AuctionRepository>();
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
+builder.Services.AddScoped<ILotRepository, LotRepository>();
 
 var configuration = builder.Configuration;
 

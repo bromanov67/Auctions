@@ -4,7 +4,7 @@ namespace Auctions.Controllers
 {
     [ApiController]
     [Route("api/auction/lots/bets")]
-    public class BetsController : ControllerBase
+    public class BetController : ControllerBase
     {
         [HttpPost]
         public async Task<IActionResult> CreateLotAsync()

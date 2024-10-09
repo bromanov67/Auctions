@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Bets\" />
-    <Folder Include="Lots\" />
   </ItemGroup>
 
   <ItemGroup>

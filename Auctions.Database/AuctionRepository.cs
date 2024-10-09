@@ -15,8 +15,6 @@ namespace Auctions.Database
             _dbContext = dbContext;
 
         }
-
-
         public async Task<IEnumerable<Auction>> GetAllAsync(CancellationToken cancellationToken) 
         {
             var auctionEntities = await _dbContext.Set<AuctionEntity>().ToListAsync();
@@ -30,7 +28,6 @@ namespace Auctions.Database
             }).ToList();
             
         }
-
         public async Task CreateAsync(Auction auction, CancellationToken cancellationToken)
         {
             var auctionEntity = new AuctionEntity
@@ -44,9 +41,7 @@ namespace Auctions.Database
             };
             _dbContext.Set<AuctionEntity>().Add(auctionEntity);
             await _dbContext.SaveChangesAsync(cancellationToken);
-        }
-
-        
+        }   
         public async Task CancelAsync(Guid auctionId, CancellationToken cancellationToken)
         {
             var auctionEntity = await _dbContext.Set<AuctionEntity>().FirstOrDefaultAsync(a => a.Id == auctionId, cancellationToken);
@@ -62,8 +57,6 @@ namespace Auctions.Database
                 throw new InvalidOperationException("Аукцион уже был отменен.");
             }
         }
-
-
         public async Task ChangeAsync(Guid auctionId, string name, DateTime dateStart, DateTime dateEnd, CancellationToken cancellationToken)
         {
             var auctionEntity = await _dbContext.Set<AuctionEntity>()
@@ -83,8 +76,6 @@ namespace Auctions.Database
         }
 
 
-
-
         private bool disposed = false;
         protected virtual void Dispose(bool disposing)
         {
@@ -102,10 +93,7 @@ namespace Auctions.Database
         {
             Dispose(true);
             GC.SuppressFinalize(this);
-        }
-
-        
+        }       
     }
-
 }
 

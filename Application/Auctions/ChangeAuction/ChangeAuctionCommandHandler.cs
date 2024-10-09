@@ -1,8 +1,4 @@
-﻿using Domain;
-using FluentResults;
-using MediatR;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
 
 namespace Auctions.Application.Auctions.ChangeAuction
 {
