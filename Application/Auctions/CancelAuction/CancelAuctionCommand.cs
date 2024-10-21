@@ -7,7 +7,7 @@ namespace Auctions.Controllers
     public record CancelAuctionCommand : IRequest<Result>
     {
         [JsonPropertyName("auctionId")]
-        public Guid AuctionId { get; set; }
+        public int AuctionId { get; set; }
 
 
     }

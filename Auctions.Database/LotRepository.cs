@@ -1,7 +1,8 @@
-﻿using Auctions.Application.Auctions;
-using Auctions.Application.Lots;
+﻿using Auctions.Application.Lots;
 using Database;
 using Domain;
+using Microsoft.EntityFrameworkCore;
+using System.Xml.Linq;
 
 namespace Auctions.Database
 {
@@ -14,9 +15,20 @@ namespace Auctions.Database
             _dbContext = dbContext;
 
         }
-        public Task<IEnumerable<Lot>> GetAllAsync(CancellationToken cancellationToken)
+        public async Task<IEnumerable<Lot>> GetAllAsync(CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var lotEntities = await _dbContext.Set<LotEntity>().ToListAsync();
+            return lotEntities.Select(e => new Lot
+            {
+                Name = e.Name,
+                Id = e.Id,
+                AuctionId = e.AuctionId,
+                Description = e.Description,
+                MinPrice = e.MinPrice,
+                RansomPrice = e.RansomPrice,
+                Status = (LotStatus)e.Status,
+                Images = e.Images
+            }).ToList();
         }
 
         public async Task CreateAsync(Lot lot, CancellationToken cancellationToken)
@@ -26,20 +38,33 @@ namespace Auctions.Database
                 Id = lot.Id,
                 Name = lot.Name,
                 AuctionId = lot.AuctionId,
+                Description = lot.Description,
                 Status = (LotStatusEntity?)lot.Status,
+                MinPrice = lot.MinPrice,
+                RansomPrice = lot.RansomPrice,
             };
             _dbContext.Set<LotEntity>().Add(lotEntity);
             await _dbContext.SaveChangesAsync(cancellationToken);
         }
 
-        public Task ChangeAsync(Guid auctionId, string name, DateTime dateStart, DateTime dateEnd, CancellationToken cancellationToken)
+        public async Task ChangeAsync(int lotId, string lotName, string descriprtion, DateTime dateStart, DateTime dateEnd,
+                                decimal betStep, decimal minPrice, decimal? ransomPrice,CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
-        }
+            var lotEntity = await _dbContext.Set<LotEntity>()
+                .FirstOrDefaultAsync(a => a.Id == lotId, cancellationToken);
 
-        public Task CancelAsync(Guid auctionId, CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
+            if (lotEntity == null)
+            {
+                throw new InvalidOperationException($"Аукцион с id {lotId} не найден.");
+            }
+
+            lotEntity.MinPrice = minPrice;
+            lotEntity.RansomPrice = ransomPrice;
+            lotEntity.Description = descriprtion;
+            lotEntity.Name = lotName;
+
+            _dbContext.Lots?.Update(lotEntity);
+            await _dbContext.SaveChangesAsync(cancellationToken);
         }
 
         private bool disposed = false;
@@ -59,6 +84,11 @@ namespace Auctions.Database
         {
             Dispose(true);
             GC.SuppressFinalize(this);
+        }
+
+        public Task CancelAsync(int lotId, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
         }
     }
 }

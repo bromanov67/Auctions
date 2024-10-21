@@ -2,11 +2,11 @@
 {
     public class Bet
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
 
-        public Guid UserId { get; set; }
+        public int UserId { get; set; }
 
-        public Guid LotId { get; set;}
+        public int LotId { get; set;}
 
         public decimal Amount { get; set; }    
 

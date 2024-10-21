@@ -1,6 +1,6 @@
 ﻿using Auctions.Application.Auctions.ChangeAuction;
 using Auctions.Application.Auctions.CreateAuction;
-using Auctions.Application.Auctions.GetAuction;
+using Auctions.Application.Auctions.GetAuctions;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Auctions.Controllers
 {
     [ApiController]
-    [Route("api/auction")]
+    [Route("api/auctions")]
     public class AuctionController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -50,7 +50,7 @@ namespace Auctions.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> CancelAuctionAsync(Guid auctionId, CancellationToken cancellationToken)
+        public async Task<IActionResult> CancelAuctionAsync(int auctionId, CancellationToken cancellationToken)
         {
             var command = new CancelAuctionCommand { AuctionId = auctionId };
             var validateResult = await _cancelAuctionCommandValidator.ValidateAsync(command, cancellationToken);
@@ -68,7 +68,7 @@ namespace Auctions.Controllers
             }
         }
         [HttpPut]
-        public async Task<IActionResult> ChangeAuction(Guid id, ChangeAuctionCommand command, CancellationToken cancellationToken)
+        public async Task<IActionResult> ChangeAuction(int id, ChangeAuctionCommand command, CancellationToken cancellationToken)
         {
             var validateResult = await _changeAuctionCommandValidator.ValidateAsync(command, cancellationToken);
             if (!validateResult.IsValid)

@@ -1,9 +1,8 @@
 ﻿using Domain;
 using FluentResults;
 using MediatR;
-using System;
 
-namespace Auctions.Application.Auctions.GetAuction
+namespace Auctions.Application.Auctions.GetAuctions
 {
     public class GetAuctionsCommandHandler : IRequestHandler<GetAuctionsCommand, Result<IEnumerable<Auction>>>
     {

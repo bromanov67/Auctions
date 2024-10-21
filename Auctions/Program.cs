@@ -2,7 +2,7 @@ using Auctions.Application.Auctions;
 using Auctions.Application.Auctions.CancelAuction;
 using Auctions.Application.Auctions.ChangeAuction;
 using Auctions.Application.Auctions.CreateAuction;
-using Auctions.Application.Auctions.GetAuction;
+using Auctions.Application.Auctions.GetAuctions;
 using Auctions.Application.Lots;
 using Auctions.Application.User.CreateUser;
 using Auctions.Application.Users;

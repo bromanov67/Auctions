@@ -3,7 +3,7 @@
 namespace Auctions.Controllers
 {
     [ApiController]
-    [Route("api/auction/lots/bets")]
+    [Route("api/auctions/lots/bets")]
     public class BetController : ControllerBase
     {
         [HttpPost]

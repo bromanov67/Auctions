@@ -1,16 +1,17 @@
-﻿using Auctions.Controllers;
+﻿using Auctions.Application.Lots;
+using Auctions.Controllers;
 using FluentResults;
 using MediatR;
 
-namespace Auctions.Application.Auctions.CancelAuction
+namespace Auctions.Application.Lots.CancelLot
 {
     public class CancelLotCommandHandler : IRequestHandler<CancelLotCommand, Result>
     {
-        private readonly IAuctionRepository _auctionRepository;
+        private readonly ILotRepository _lotRepository;
 
-        public CancelLotCommandHandler(IAuctionRepository auctionRepository)
+        public CancelLotCommandHandler(ILotRepository lotRepository)
         {
-            _auctionRepository = auctionRepository;
+            _lotRepository = lotRepository;
         }
 
 
@@ -20,7 +21,7 @@ namespace Auctions.Application.Auctions.CancelAuction
             try
             {
                 // Отмена аукциона
-                await _auctionRepository.CancelAsync(command.AuctionId, cancellationToken);
+                await _lotRepository.CancelAsync(command.LotId, cancellationToken);
                 return Result.Ok();
             }
             catch (Exception ex)

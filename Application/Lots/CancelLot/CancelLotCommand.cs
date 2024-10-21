@@ -6,9 +6,7 @@ namespace Auctions.Controllers
 {
     public record CancelLotCommand : IRequest<Result>
     {
-        [JsonPropertyName("auctionId")]
-        public Guid AuctionId { get; set; }
-
-
+        [JsonPropertyName("lotId")]
+        public int LotId { get; set; }
     }
 }

@@ -1,24 +1,23 @@
 ﻿using Domain;
 using FluentResults;
 using MediatR;
-using System;
 
-namespace Auctions.Application.Auctions.GetAuction
+namespace Auctions.Application.Lots.GetLots
 {
-    public class GetLotsCommandHandler : IRequestHandler<GetLotsCommand, Result<IEnumerable<Auction>>>
+    public class GetLotsCommandHandler : IRequestHandler<GetLotsCommand, Result<IEnumerable<Lot>>>
     {
-        private readonly IAuctionRepository _auctionRepository;
+        private readonly ILotRepository _lotRepository;
 
-        public GetLotsCommandHandler(IAuctionRepository auctionRepository)
+        public GetLotsCommandHandler(ILotRepository lotRepository)
         {
-            _auctionRepository = auctionRepository;
+            _lotRepository = lotRepository;
         }
 
-        public async Task<Result<IEnumerable<Auction>>> Handle(GetLotsCommand command, CancellationToken cancellationToken)
+        public async Task<Result<IEnumerable<Lot>>> Handle(GetLotsCommand command, CancellationToken cancellationToken)
         {
-            var allAuctions = await _auctionRepository.GetAllAsync(cancellationToken);
+            var allLots = await _lotRepository.GetAllAsync(cancellationToken);
 
-            return Result.Ok(allAuctions); // Return all auctions
+            return Result.Ok(allLots); // Return all auctions
         }
     }
 }

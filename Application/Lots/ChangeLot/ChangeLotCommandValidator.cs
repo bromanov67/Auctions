@@ -1,13 +1,14 @@
-﻿using FluentValidation;
+﻿using Auctions.Application.Lots.ChagneLot;
+using FluentValidation;
 
-namespace Auctions.Application.Auctions.ChangeAuction
+namespace Auctions.Application.Lots.ChangelLot
 {
     public class ChangeLotCommandValidator : AbstractValidator<ChangeLotCommand>
     {
         // TODO: написать правила валидации данных
         public ChangeLotCommandValidator()
         {
-            RuleFor(n => n.Name).NotEmpty().WithMessage("Пустое имя");
+            RuleFor(n => n.LotName).NotEmpty().WithMessage("Пустое имя");
 
             RuleFor(x => x.DateStart).NotEmpty().WithMessage("Пустая дата начала");
             RuleFor(x => x.DateEnd).NotEmpty().WithMessage("Пустая дата окончания");

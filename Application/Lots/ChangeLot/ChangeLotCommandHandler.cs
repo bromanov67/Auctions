@@ -1,7 +1,8 @@
 ﻿using Auctions.Application.Lots;
+using Auctions.Application.Lots.ChagneLot;
 using MediatR;
 
-namespace Auctions.Application.Auctions.ChangeAuction
+namespace Auctions.Application.Lots.ChangeLot
 {
     public class ChangeLotHandler : IRequestHandler<ChangeLotCommand, Unit>
     {
@@ -14,9 +15,10 @@ namespace Auctions.Application.Auctions.ChangeAuction
 
         public async Task<Unit> Handle(ChangeLotCommand command, CancellationToken cancellationToken)
         {
-          /*  // Обновляем аукцион по id
-            await _lotRepository.ChangeAsync(command.LotId, command.Name, command.DateStart, command.DateEnd, cancellationToken);
-*/
+            // Обновляем аукцион по id
+            await _lotRepository.ChangeAsync(command.lotId, command.LotName, command.Descriprtion, 
+                command.DateStart, command.DateStart,command.BetStep, command.MinPrice, command.RansomPrice, cancellationToken);
+                
             return Unit.Value;
         }
     }

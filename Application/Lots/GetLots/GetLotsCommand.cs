@@ -1,11 +1,10 @@
 ﻿using Domain;
 using FluentResults;
 using MediatR;
-using System.Text.Json.Serialization;
 
-namespace Auctions.Application.Auctions.GetAuction
+namespace Auctions.Application.Lots.GetLots
 {
-    public record GetLotsCommand : IRequest<Result<IEnumerable<Auction>>>
+    public record GetLotsCommand : IRequest<Result<IEnumerable<Lot>>>
     {
 
     }

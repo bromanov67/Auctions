@@ -38,36 +38,26 @@ namespace Auctions.Database
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task CancelAsync(Guid userId, CancellationToken cancellationToken)
+        public async Task CancelAsync(int userId, CancellationToken cancellationToken)
         {
-    /*        // Получаем аукцион по идентификатору
-            var user = await _dbContext.Set<User>().FirstOrDefaultAsync(a => a.Id == userId);
-
-            // Проверяем, что аукцион еще не был отменен
-            if (uder?.IsCanceled ?? true)
-            {
-                throw new InvalidOperationException("Аукцион уже был отменен.");
-            }
-
-            // Отменяем аукцион
-            user.IsCanceled = true;
-
-            // Сохраняем изменения в базе данных
-            await _dbContext.SaveChangesAsync();*/
+            //TODO delete user from db
         }
 
+        // TODO
+        // read about dispose and IDisposable
 
         private bool disposed = false;
         protected virtual void Dispose(bool disposing)
         {
-            if (!this.disposed)
+            if (!disposed)
             {
                 if (disposing)
                 {
                     _dbContext.Dispose();
                 }
+
             }
-            this.disposed = true;
+            disposed = true;
         }
 
         public void Dispose()

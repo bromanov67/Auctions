@@ -7,7 +7,7 @@ namespace Auctions.Application.Users
         public Task<IEnumerable<Domain.User>> GetAllAsync(CancellationToken cancellationToken);
         public Task CreateAsync(Domain.User user, CancellationToken cancellationToken);
         public Task ChangeAsync(Domain.User user, CancellationToken cancellationToken);
-        public Task CancelAsync(Guid userId, CancellationToken cancellationToken);
+        public Task CancelAsync(int userId, CancellationToken cancellationToken);
     }
 
 }

@@ -2,17 +2,16 @@
 {
     public class User
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
 
         public string Name { get; set; } = string.Empty;   
 
         public string Email { get; set; } = string.Empty;
 
-        public User(string name, string email, Guid id) 
+        public User(string name, string email) 
         {
             Name = name;
             Email = email;
-            Id = id;
         }
     }
 }

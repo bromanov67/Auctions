@@ -1,6 +1,6 @@
-﻿using Auctions.Application.Auctions.ChangeAuction;
-using Auctions.Application.Auctions.CreateAuction;
-using Auctions.Application.Auctions.GetAuction;
+﻿using Auctions.Application.Lots.ChagneLot;
+using Auctions.Application.Lots.CreateLot;
+using Auctions.Application.Lots.GetLots;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Auctions.Controllers
 {
     [ApiController]
-    [Route("api/auction/lots")]
+    [Route("api/auctions/lots")]
     public class LotController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -57,15 +57,31 @@ namespace Auctions.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> ChangeLotAsync()
+        public async Task<IActionResult> ChangeLotAsync(ChangeLotCommand command, CancellationToken cancellationToken)
         {
-            return Ok();
+            var validateResult = await _changeLotCommandValidator.ValidateAsync(command, cancellationToken);
+            if (!validateResult.IsValid)
+                return BadRequest(new { errors = validateResult.Errors.Select(x => x.ErrorMessage) });
+            await _mediator.Send(new ChangeLotCommand(command.lotId, command.LotName,command.Descriprtion, 
+                command.MinPrice, command.BetStep, command.RansomPrice, command.DateStart, command.DateEnd), cancellationToken);
+            return NoContent();
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetLotsAsync(int LotId)
+        public async Task<IActionResult> GetLotsAsync(CancellationToken cancellationToken)
         {
-            return Ok();
+            var command = new GetLotsCommand();
+            var validateResult = await _getLotsCommandValidator.ValidateAsync(command, cancellationToken);
+            if (!validateResult.IsValid)
+                return BadRequest(new { errors = validateResult.Errors.Select(x => x.ErrorMessage) });
+
+            var result = await _mediator.Send(command, cancellationToken);
+            if (result.IsFailed)
+            {
+                return NotFound(result.Errors);
+            }
+
+            return Ok(result);
         }
     }
 }

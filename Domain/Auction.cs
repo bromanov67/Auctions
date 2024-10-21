@@ -4,9 +4,9 @@ namespace Domain
 {
     public class Auction
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
 
-        public Guid UserId { get; set; }
+        public int UserId { get; set; }
 
         public string Name {  get; set; }
 
@@ -60,15 +60,13 @@ namespace Domain
                     return AuctionStatus.Canceled;
             }
         }
-        public Auction() { }
-        public Auction(string name, Guid userId, DateTime dateStart, DateTime dateEnd)
+        public Auction(string name, int userId, DateTime dateStart, DateTime dateEnd)
         {
             Name = name;
             UserId = userId;
             DateStart = dateStart;
             DateEnd = dateEnd;
-            IsCreation = true;
-            Id = Guid.NewGuid();
+            IsCreation = true;        
         }
 
     }

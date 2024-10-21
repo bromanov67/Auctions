@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Auctions.Application.User.CreateUser
 {
-    public record CreateUserCommand : IRequest<Result<Guid>>
+    public record CreateUserCommand : IRequest<Result<int>>
     {
         [JsonPropertyName("name")]
         public string Name { get; set; } = string.Empty;
@@ -17,8 +17,8 @@ namespace Auctions.Application.User.CreateUser
         [JsonPropertyName("email")]
         public string Email { get; set; } = string.Empty;
 
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; }
+/*        [JsonPropertyName("id")]
+        public int Id { get; set; }*/
 
     }
 }

@@ -1,7 +1,7 @@
 ﻿using Auctions.Controllers;
 using FluentValidation;
 
-namespace Auctions.Application.Auctions.CancelAuction
+namespace Auctions.Application.Lots.CancelLot
 {
     public class CancelLotCommandValidator : AbstractValidator<CancelLotCommand>
     {

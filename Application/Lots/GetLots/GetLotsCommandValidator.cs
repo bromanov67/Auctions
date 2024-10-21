@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Auctions.Application.Auctions.GetAuction
+namespace Auctions.Application.Lots.GetLots
 {
     public class GetLotsCommandValidator : AbstractValidator<GetLotsCommand>
     {

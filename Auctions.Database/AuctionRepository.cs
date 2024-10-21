@@ -1,5 +1,4 @@
 ﻿using Auctions.Application.Auctions;
-using Auctions.Database.Migrations;
 using Database;
 using Domain;
 using Microsoft.EntityFrameworkCore;
@@ -30,7 +29,7 @@ namespace Auctions.Database
         }
         public async Task CreateAsync(Auction auction, CancellationToken cancellationToken)
         {
-            var auctionEntity = new AuctionEntity
+            var auctionEntity = new AuctionEntity 
             {
                 DateStart = auction.DateStart,
                 Id = auction.Id,
@@ -42,7 +41,7 @@ namespace Auctions.Database
             _dbContext.Set<AuctionEntity>().Add(auctionEntity);
             await _dbContext.SaveChangesAsync(cancellationToken);
         }   
-        public async Task CancelAsync(Guid auctionId, CancellationToken cancellationToken)
+        public async Task CancelAsync(int auctionId, CancellationToken cancellationToken)
         {
             var auctionEntity = await _dbContext.Set<AuctionEntity>().FirstOrDefaultAsync(a => a.Id == auctionId, cancellationToken);
 
@@ -57,7 +56,7 @@ namespace Auctions.Database
                 throw new InvalidOperationException("Аукцион уже был отменен.");
             }
         }
-        public async Task ChangeAsync(Guid auctionId, string name, DateTime dateStart, DateTime dateEnd, CancellationToken cancellationToken)
+        public async Task ChangeAsync(int auctionId, string name, DateTime dateStart, DateTime dateEnd, CancellationToken cancellationToken)
         {
             var auctionEntity = await _dbContext.Set<AuctionEntity>()
                 .FirstOrDefaultAsync(a => a.Id == auctionId, cancellationToken);
