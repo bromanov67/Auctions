@@ -1,6 +1,7 @@
 ﻿using Auctions.Application.Lots.ChagneLot;
 using Auctions.Application.Lots.CreateLot;
 using Auctions.Application.Lots.GetLots;
+using Auctions.Application.Lots.GetLotsByAuctionId;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -15,6 +16,7 @@ namespace Auctions.Controllers
         private readonly IValidator<CreateLotCommand> _createLotCommandValidator;
         private readonly IValidator<CancelLotCommand> _cancelLotCommandValidator;
         private readonly IValidator<GetLotsCommand> _getLotsCommandValidator;
+        private readonly IValidator<GetLotsByAuctionIdCommand> _getLotsByAuctionIdCommandValidator;
         private readonly IValidator<ChangeLotCommand> _changeLotCommandValidator;
 
 
@@ -23,13 +25,15 @@ namespace Auctions.Controllers
             IValidator<CreateLotCommand> createValidator,
             IValidator<CancelLotCommand> cancelValidator,
             IValidator<GetLotsCommand> getValidator,
-            IValidator<ChangeLotCommand> changeValidator)
+            IValidator<ChangeLotCommand> changeValidator,
+            IValidator<GetLotsByAuctionIdCommand> getByAuctionIdValidator)
         {
             _mediator = mediator;
             _createLotCommandValidator = createValidator;
             _cancelLotCommandValidator = cancelValidator;
             _getLotsCommandValidator = getValidator;
             _changeLotCommandValidator = changeValidator;
+            _getLotsByAuctionIdCommandValidator = getByAuctionIdValidator;
         }
 
         [HttpPost]
@@ -83,5 +87,22 @@ namespace Auctions.Controllers
 
             return Ok(result);
         }
+
+        [HttpPost("byId")]
+        public async Task<IActionResult> GetLotsByAuctionIdAsync(GetLotsByAuctionIdCommand command, CancellationToken cancellationToken)
+        {
+            var validateResult = await _getLotsByAuctionIdCommandValidator.ValidateAsync(command, cancellationToken);
+            if (!validateResult.IsValid)
+                return BadRequest(new { errors = validateResult.Errors.Select(x => x.ErrorMessage) });
+
+            var result = await _mediator.Send(command, cancellationToken);
+            if (result.IsFailed)
+            {
+                return NotFound(result.Errors);
+            }
+
+            return Ok(result);
+        }
+
     }
 }

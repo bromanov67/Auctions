@@ -1,0 +1,199 @@
+[
+  {
+    "ContainingType": "Auctions.Controllers.AuctionController",
+    "Method": "CreateAuctionAsync",
+    "RelativePath": "api/auctions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Auctions.Application.Auctions.CreateAuction.CreateAuctionCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Auctions.Controllers.AuctionController",
+    "Method": "CancelAuctionAsync",
+    "RelativePath": "api/auctions",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "auctionId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Auctions.Controllers.AuctionController",
+    "Method": "ChangeAuction",
+    "RelativePath": "api/auctions",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "command",
+        "Type": "Auctions.Application.Auctions.ChangeAuction.ChangeAuctionCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Auctions.Controllers.AuctionController",
+    "Method": "GetAuctionsAsync",
+    "RelativePath": "api/auctions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Auctions.Controllers.LotController",
+    "Method": "CreateLotAsync",
+    "RelativePath": "api/auctions/lots",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Auctions.Application.Lots.CreateLot.CreateLotCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Auctions.Controllers.LotController",
+    "Method": "CancelLotAsync",
+    "RelativePath": "api/auctions/lots",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Auctions.Controllers.LotController",
+    "Method": "ChangeLotAsync",
+    "RelativePath": "api/auctions/lots",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Auctions.Application.Lots.ChagneLot.ChangeLotCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Auctions.Controllers.LotController",
+    "Method": "GetLotsAsync",
+    "RelativePath": "api/auctions/lots",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Auctions.Controllers.BetController",
+    "Method": "CreateLotAsync",
+    "RelativePath": "api/auctions/lots/bets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Auctions.Controllers.BetController",
+    "Method": "DeleteLotAsync",
+    "RelativePath": "api/auctions/lots/bets",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Auctions.Controllers.BetController",
+    "Method": "UpdateLotAsync",
+    "RelativePath": "api/auctions/lots/bets",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Auctions.Controllers.LotController",
+    "Method": "GetLotsByAuctionIdAsync",
+    "RelativePath": "api/auctions/lots/byId",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Auctions.Application.Lots.GetLotsByAuctionId.GetLotsByAuctionIdCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Users.Controllers.UserController",
+    "Method": "CreateUserAsync",
+    "RelativePath": "api/users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Auctions.Application.User.CreateUser.CreateUserCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Users.Controllers.UserController",
+    "Method": "DeleteLotAsync",
+    "RelativePath": "api/users",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Users.Controllers.UserController",
+    "Method": "UpdateLotAsync",
+    "RelativePath": "api/users",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

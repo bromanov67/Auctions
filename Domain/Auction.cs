@@ -8,7 +8,7 @@ namespace Domain
 
         public int UserId { get; set; }
 
-        public string Name {  get; set; }
+        public string Name { get; set; }
 
         public Dictionary<int, Lot> Lots { get; set; } = [];
 
@@ -16,7 +16,7 @@ namespace Domain
 
         public bool IsCanceled { get; set; }
 
-        public DateTime DateStart { get; set; } 
+        public DateTime DateStart { get; set; }
 
         public DateTime DateEnd { get; set; }
 
@@ -28,17 +28,17 @@ namespace Domain
             IsCreation = true;
         }*/
 
-       /* public DateTime DateEnd
-        {
-            get
-            {
-                var maxBetDate = Lots.Values.SelectMany(l => l.Bets).Max(s => s.DateTime).AddSeconds(30);
+        /* public DateTime DateEnd
+         {
+             get
+             {
+                 var maxBetDate = Lots.Values.SelectMany(l => l.Bets).Max(s => s.DateTime).AddSeconds(30);
 
-                return _dateEnd > maxBetDate ? _dateEnd : maxBetDate;
-            }
-            init => _dateEnd = value;
-            
-        }*/
+                 return _dateEnd > maxBetDate ? _dateEnd : maxBetDate;
+             }
+             init => _dateEnd = value;
+
+         }*/
         public AuctionStatus Status
         {
             get
@@ -49,7 +49,7 @@ namespace Domain
                     return AuctionStatus.Creation;
 
                 if (dateTimeNow < DateStart)
-                    return AuctionStatus.WaitBidding;     
+                    return AuctionStatus.WaitBidding;
 
                 if (dateTimeNow > DateStart && dateTimeNow < DateEnd)
                     return AuctionStatus.Bidding;
@@ -60,6 +60,7 @@ namespace Domain
                     return AuctionStatus.Canceled;
             }
         }
+        public Auction() { }
         public Auction(string name, int userId, DateTime dateStart, DateTime dateEnd)
         {
             Name = name;

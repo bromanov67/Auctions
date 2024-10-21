@@ -4,6 +4,11 @@ using Auctions.Application.Auctions.ChangeAuction;
 using Auctions.Application.Auctions.CreateAuction;
 using Auctions.Application.Auctions.GetAuctions;
 using Auctions.Application.Lots;
+using Auctions.Application.Lots.CancelLot;
+using Auctions.Application.Lots.ChangelLot;
+using Auctions.Application.Lots.CreateLot;
+using Auctions.Application.Lots.GetLots;
+using Auctions.Application.Lots.GetLotsByAuctionId;
 using Auctions.Application.User.CreateUser;
 using Auctions.Application.Users;
 using Auctions.Database;
@@ -20,16 +25,19 @@ builder.Services.AddMediatR(config => config.RegisterServicesFromAssemblies(AppD
 
 // Регистрация всех валидаторов
 builder.Services.AddValidatorsFromAssemblyContaining<CreateAuctionCommandValidator>();
-
 builder.Services.AddValidatorsFromAssemblyContaining<GetAuctionsCommandValidator>();
-
 builder.Services.AddValidatorsFromAssemblyContaining<ChangeAuctionCommandValidator>();
-
 builder.Services.AddValidatorsFromAssemblyContaining<CancelAuctionCommandValidator>();
 
 builder.Services.AddValidatorsFromAssemblyContaining<CreateUserCommandValidator>();
-
 builder.Services.AddValidatorsFromAssemblyContaining<CreateUserCommandValidator>();
+
+builder.Services.AddValidatorsFromAssemblyContaining<CreateLotCommandValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<ChangeLotCommandValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<CancelLotCommandValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<GetLotsCommandValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<GetLotsByAuctionIdCommandValidator>();
+
 
 
 

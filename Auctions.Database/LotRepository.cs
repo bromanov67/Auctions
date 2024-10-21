@@ -30,6 +30,24 @@ namespace Auctions.Database
                 Images = e.Images
             }).ToList();
         }
+        public async Task<IEnumerable<Lot>> GetAllByAuctionIdAsync(int auctionId, CancellationToken cancellationToken)
+        {
+            var lotEntities = await _dbContext.Set<LotEntity>()
+                .Where(a => a.AuctionId == auctionId)
+                .ToListAsync();
+
+            return lotEntities.Select(e => new Lot
+            {
+                Name = e.Name,
+                Id = e.Id,
+                AuctionId = e.AuctionId,
+                Description = e.Description,
+                MinPrice = e.MinPrice,
+                RansomPrice = e.RansomPrice,
+                Status = (LotStatus)e.Status,
+                Images = e.Images
+            }).ToList();
+        }
 
         public async Task CreateAsync(Lot lot, CancellationToken cancellationToken)
         {
